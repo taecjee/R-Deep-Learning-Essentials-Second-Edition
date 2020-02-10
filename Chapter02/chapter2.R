@@ -274,7 +274,7 @@ tuning <- list(
 ## load packages, export required data and variables
 ## and register as a backend for use with the foreach package
 cl <- makeCluster(5)
-clusterEvalQ(cl, {source("cluster_inc.R")})
+clusterEvalQ(cl, {source("Chapter02/cluster_inc.R")})
 clusterExport(cl,
   c("tuning", "use.train.x", "use.train.y",
     "use.test.x", "use.test.y")

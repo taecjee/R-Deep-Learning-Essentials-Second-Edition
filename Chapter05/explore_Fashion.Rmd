@@ -4,7 +4,7 @@ The Fashion MINST dataset is available @ [Kaggle](https://www.kaggle.com/zalando
 Download the data and put it in the data folder. Now we can read data into R and get an idea of how it looks. 
 
 ```{r}
-train <- read.csv("../data/fashion-mnist_train.csv", header=TRUE, nrows=20)
+train <- read.csv("C:/RProject/data/fashion-mnist_train.csv", header=TRUE, nrows=20)
 ```
 
 We have `r nrow(train)` rows and `r ncol(train)` columns, we will look at the first 5 columns and the last 5 columns:

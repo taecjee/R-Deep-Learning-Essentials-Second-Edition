@@ -1,5 +1,5 @@
 library(readr)
-data_directory <- "../dunnhumby/"
+data_directory <- "C:/RProject/data/dunnhumby/"
 ?list.files
 import_data <- function (data_directory,bExploreData=1)
 {

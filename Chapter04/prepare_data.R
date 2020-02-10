@@ -2,7 +2,7 @@ library(readr)
 library(reshape2)
 library(dplyr)
 
-source("import.R")
+source("Chapter04/import.R")
 
 # step 1, merge files
 fileName <- import_data(data_directory,bExploreData=0)

@@ -9,7 +9,7 @@ library(xgboost)
 library(ggplot2)
 
 set.seed(42)
-fileName <- "../dunnhumby/predict.csv"
+fileName <- "../data/dunnhumby/predict.csv"
 dfData <- read_csv(fileName,
                    col_types = cols(
                      .default = col_double(),

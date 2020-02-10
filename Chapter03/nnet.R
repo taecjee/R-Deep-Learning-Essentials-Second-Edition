@@ -1,4 +1,4 @@
-source("nnet_functions.R")
+source("Chapter03/nnet_functions.R")
 
 data_sel <- "bulls_eye"
 #data_sel <- "worms"

@@ -2,7 +2,7 @@
 First, let us download the data by uncommenting the two lines below. If data is not available at that link, download from [here](https://www.kaggle.com/c/digit-recognizer/data).
 
 ```{r}
-dataDirectory <- "../data"
+dataDirectory <- "C:/RProject/data"
 if (!file.exists(paste(dataDirectory,'/train.csv',sep="")))
 {
   link <- 'https://apache-mxnet.s3-accelerate.dualstack.amazonaws.com/R/data/mnist_csv.zip'

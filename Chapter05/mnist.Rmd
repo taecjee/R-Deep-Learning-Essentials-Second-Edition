@@ -7,7 +7,7 @@
 First, let us download the data if it does not already exist. If data is not available at that link, download from [here](https://www.kaggle.com/c/digit-recognizer/data).
 
 ```{r, echo=FALSE}
-dataDirectory <- "../data"
+dataDirectory <- "C:/RProject/data"
 if (!file.exists(paste(dataDirectory,'/train.csv',sep="")))
 {
   link <- 'https://apache-mxnet.s3-accelerate.dualstack.amazonaws.com/R/data/mnist_csv.zip'
@@ -38,7 +38,7 @@ Read data into R and convert to matrices. We want to get an estimate of accuracy
 require(mxnet)
 options(scipen=999)
 
-dfMnist <- read.csv("../data/train.csv", header=TRUE)
+dfMnist <- read.csv("C:/RProject/data/train.csv", header=TRUE)
 yvars <- dfMnist$label
 dfMnist$label <- NULL
 
@@ -91,7 +91,8 @@ softmax      <- mx.symbol.SoftmaxOutput(fullconnect3, name="softmax")
 Now lets train the base model. I have a GPU installed, so I can use that.
 
 ```{r}
-devices <- mx.gpu()
+#devices <- mx.gpu()
+devices <- mx.cpu()
 mx.set.seed(0)
 model <- mx.model.FeedForward.create(softmax, X=train, y=train.y,
                                      ctx=devices,array.batch.size=128,
@@ -146,7 +147,8 @@ dim(train.array) <- c(28,28,1,ncol(train))
 test.array <- test
 dim(test.array) <- c(28,28,1,ncol(test))
 
-devices <- mx.gpu()
+devices <- mx.cpu()
+#devices <- mx.gpu()
 mx.set.seed(0)
 model2 <- mx.model.FeedForward.create(softmax, X=train.array, y=train.y,
                                      ctx=devices,array.batch.size=128,

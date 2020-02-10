@@ -4,6 +4,7 @@
 ##                                                                            ##
 ################################################################################
 
+#install.packages("C:/Users/opc/Downloads/glmnet_2.0-18.zip", repos = NULL, type = "win.binary")
 library(glmnet)
 library(MASS)
 library(deepnet)
@@ -85,7 +86,7 @@ test.y <- digits.train[test, 1]
 ## register backend so that different decays can be
 ## estimated in parallel
 cl <- makeCluster(parallel::detectCores() -1)
-clusterEvalQ(cl, {source("cluster_inc.R")})
+clusterEvalQ(cl, {source("Chapter03/cluster_inc.R")})
 registerDoSNOW(cl)
 
 set.seed(1234)

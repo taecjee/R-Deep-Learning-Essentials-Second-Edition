@@ -8,7 +8,7 @@ library(readr)
 ##Import data
 Creates summary file if it does not already exist
 ```{r}
-source("import.R")
+source("C:/RProject/R-Deep-Learning-Essentials-Second-Edition/Chapter04/import.R")
 
 # step 1, merge files
 fileName <- import_data(data_directory,bExploreData=1)
